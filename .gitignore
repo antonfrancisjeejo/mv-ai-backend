@@ -1,0 +1,17 @@
+# Node modules
+/__pycache__/
+
+# Environment files
+.env
+
+# Logs
+*.log
+
+
+# IDE or editor configurations
+.vscode/
+.idea/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
