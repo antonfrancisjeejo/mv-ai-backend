@@ -4,4 +4,4 @@ class JobInput(BaseModel):
     jobTitle: str
     jobCategory: str
     jobSkills: str
-    jobDes: str
+    jobDesc: str

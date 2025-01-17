@@ -6,7 +6,7 @@ load_dotenv()
 def keywords_controller(input):
 
         jobTitle = input.jobTitle
-        jobDes = input.jobDes
+        jobDesc = input.jobDesc
         jobCategory = input.jobCategory
         jobSkills = input.jobSkills
 
@@ -20,7 +20,7 @@ def keywords_controller(input):
         {jobCategory}
 
         Job Description:
-        {jobDes}
+        {jobDesc}
 
         Job skills:
         {jobSkills}
@@ -30,7 +30,7 @@ def keywords_controller(input):
         client = OpenAI()
 
         completion = client.chat.completions.create(
-                model="o1-preview",
+                model="o1-mini",
                 messages=[
                         {
                                 "role": "user",

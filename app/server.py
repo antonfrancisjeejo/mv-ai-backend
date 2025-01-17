@@ -11,19 +11,11 @@ from app.routes import api_router
 def init_routers(app_: FastAPI) -> None:
     app_.include_router(api_router, prefix="/api")
 
-
-def make_middleware():
-    middleware = [
-        Middleware(
-            CORSMiddleware,
-            allow_origins=["*"],
-            allow_credentials=True,
-            allow_methods=["*"],
-            allow_headers=["*"],
-        ),
-    ]
-    return middleware
-
+origins = [
+    "http://app.trainable.us",
+    "http://localhost:5173",
+    "http://localhost:4000",
+]
 
 def create_app() -> FastAPI:
     app_ = FastAPI(
@@ -32,7 +24,13 @@ def create_app() -> FastAPI:
         version="1.0.0",
         # docs_url=None if config.ENV == "production" else "/docs",
         # redoc_url=None if config.ENV == "production" else "/redoc",
-        middleware=make_middleware(),
+    )
+    app_.add_middleware(
+        CORSMiddleware,
+        allow_origins=["*"],
+        allow_credentials=True,
+        allow_methods=["*"],
+        allow_headers=["*"],
     )
     init_routers(app_=app_)
     return app_
