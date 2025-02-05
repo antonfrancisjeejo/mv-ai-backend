@@ -3,6 +3,7 @@ anyio==4.5.2
 certifi==2024.12.14
 charset-normalizer==3.4.1
 click==8.1.8
+decorator==4.4.2
 distro==1.9.0
 dnspython==2.6.1
 email_validator==2.2.0
@@ -14,6 +15,8 @@ httpcore==1.0.7
 httptools==0.6.4
 httpx==0.28.1
 idna==3.10
+imageio==2.35.1
+imageio-ffmpeg==0.5.1
 Jinja2==3.1.5
 jiter==0.8.2
 jsonpatch==1.33
@@ -24,9 +27,13 @@ langsmith==0.1.147
 markdown-it-py==3.0.0
 MarkupSafe==2.1.5
 mdurl==0.1.2
+moviepy==1.0.3
+numpy==1.24.4
 openai==1.58.1
 orjson==3.10.13
 packaging==24.2
+pillow==10.4.0
+proglog==0.1.10
 pydantic==2.10.4
 pydantic_core==2.27.2
 Pygments==2.18.0

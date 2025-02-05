@@ -10,6 +10,10 @@ COPY requirements.txt .
 # Install the Python dependencies
 RUN pip install -r requirements.txt
 
+# Install ffmpeg for video checking
+RUN apt-get -y update
+RUN apt-get install ffmpeg libsm6 libxext6  -y
+
 # Copy the application code to the working directory
 COPY . .
 
